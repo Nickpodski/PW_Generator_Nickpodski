@@ -15,6 +15,7 @@ function generatePassword() {
   var i = 0
   if (pwLength < 8 || pwLength > 128) {
     alert("Length Must be between 8-128 characters please try again.");
+    return 'Please Try Again!';
   } else {
     while ( i === 0) {
       var pwLowerCase = confirm("Do you want lowercase letters?");
