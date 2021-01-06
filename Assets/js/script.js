@@ -28,63 +28,91 @@ function generatePassword() {
       }
     }
 
-    // One condition chosen.
+  // One condition chosen.
+
+    // Only Lowercase letters.
     if (pwLowerCase == true && pwUpperCase == false && pwNumbers == false && pwSpecial == false) {
       lcPW = randomPW('abcdefghijklmnopqrstuvwxy');
       return lcPW;
     }
+
+    // Only Upppercase Letters.
     if (pwLowerCase == false && pwUpperCase == true && pwNumbers == false && pwSpecial == false) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
       return lcPW;
     }
+
+    // Only Numbers.
     if (pwLowerCase == false && pwUpperCase == false && pwNumbers == true && pwSpecial == false) {
       lcPW = randomPW('0123456789');
       return lcPW;
     }
+
+    // Only Special Characters
     if (pwLowerCase == false && pwUpperCase == false && pwNumbers == false && pwSpecial == true) {
       lcPW = randomPW('~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
     }
 
-    // Two conditions chosen.
+  // Two conditions chosen.
+
+    // Only Lowercase and Uppercase Letters.
     if (pwLowerCase == true && pwUpperCase == true && pwNumbers == false && pwSpecial == false) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy');
       return lcPW;
     }
+
+    // Only Lowercase letters and Numbers.
     if (pwLowerCase == true && pwUpperCase == false && pwNumbers == true && pwSpecial == false) {
       lcPW = randomPW('abcdefghijklmnopqrstuvwxy0123456789');
       return lcPW;
     }
+
+    // Only Lowercase Lettters and Special Characters.
     if (pwLowerCase == true && pwUpperCase == false && pwNumbers == false && pwSpecial == true) {
       lcPW = randomPW('abcdefghijklmnopqrstuvwxy~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
     }
+
+    // Only Uppercase Letters and Numbers.
     if (pwLowerCase == false && pwUpperCase == true && pwNumbers == true && pwSpecial == false) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXY0123456789');
       return lcPW;
     }
+
+    // Only Uppercase Letters and Special Characters.
     if (pwLowerCase == false && pwUpperCase == true && pwNumbers == false && pwSpecial == true) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXY~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
     }
+
+    // Only Numbers and Special Characters.
     if (pwLowerCase == false && pwUpperCase == false && pwNumbers == true && pwSpecial == true) {
       lcPW = randomPW('0123456789~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
     }
 
-    // 3 conditions chosen
+  // 3 conditions chosen
+
+    // No Special Characters.
     if (pwLowerCase == true && pwUpperCase == true && pwNumbers == true && pwSpecial == false) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy0123456789');
       return lcPW;
     }
+
+    // No numbers.
     if (pwLowerCase == true && pwUpperCase == true && pwNumbers == false && pwSpecial == true) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
     }
+
+    // No Uppercase Letters.
     if (pwLowerCase == true && pwUpperCase == false && pwNumbers == true && pwSpecial == true) {
       lcPW = randomPW('abcdefghijklmnopqrstuvwxy0123456789~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
     }
+
+    // No Lowercase Letters.
     if (pwLowerCase == false && pwUpperCase == true && pwNumbers == true && pwSpecial == true) {
       lcPW = randomPW('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~`!@#$%^&*()_-+={[}]|:;<,>.?/');
       return lcPW;
@@ -107,7 +135,6 @@ function generatePassword() {
     }
   }
 }  
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
