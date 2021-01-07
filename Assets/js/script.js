@@ -12,7 +12,7 @@ function writePassword() {
 function generatePassword() {
   var pwLength = prompt("How long would you like your password? Min = 8 Max = 128")
   var i = 0
-  if (pwLength < 8 || pwLength > 128) {
+  if (pwLength < 8 || pwLength > 128 || pwLength !== isNaN()) {
     alert("Length Must be between 8-128 characters please try again.");
     return 'Please Try Again!';
   } else {
