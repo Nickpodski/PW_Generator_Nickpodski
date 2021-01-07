@@ -52,20 +52,20 @@ function generatePassword() {
     }
 
     // After password criteria chosen call funtion to create password then returns it.
-    lcPW = randomPW();
+    lcPW = randomPW(pwLength, chars);
     return lcPW;
-
-    // function for making random password after criteria chosen.
-    function randomPW() {
-      lcPass = '';
-      for (var n = 0; n < pwLength; ++n) {
-        var c = Math.floor(Math.random()*chars.length + 1);
-        lcPass += chars.charAt(c);
-      }
-      return lcPass;
-    }
   }
-}  
+} 
+
+// function for making random password after criteria chosen.
+function randomPW(pwL, char) {
+  lcPass = '';
+  for (var n = 0; n < pwL; ++n) {
+    var c = Math.floor(Math.random()*char.length + 1);
+    lcPass += char.charAt(c);
+  }
+  return lcPass;
+} 
 
 // Event listener to generate button
 generateBtn.addEventListener("click", writePassword);
