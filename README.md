@@ -6,8 +6,8 @@
 
 ## Screenshots
 
-![PW Generator Site](assets/images/PW_Generator_Screenshot_Default.png)
-![PW Generator Site With Generated PW](assets/images/PW_Generator_Screenshot_PW.png)
+![PW Generator Site](Assets/images/PW_Generator_Screenshot_Default.png)
+![PW Generator Site With Generated PW](Assets/images/PW_Generator_Screenshot_PW.png)
 
 ## Links
 
